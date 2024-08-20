@@ -22,12 +22,10 @@ class Item {
 }
 
 List<Item> items = [
-  Item(image: 'assets/images/category_images/pants.jpg', name: 'Pants'),
+  Item(image: 'assets/images/category_images/pants.jpeg', name: 'Pants'),
   Item(image: 'assets/images/category_images/jeans.jpg', name: 'Jeans'),
-  Item(
-      image: 'assets/images/category_images/casual-men-short-pants.jpg',
-      name: 'Shorts'),
-  Item(image: 'assets/images/category_images/fashion.jpg', name: 'Skirts'),
+  Item(image: 'assets/images/category_images/shorts.jpg', name: 'Shorts'),
+  Item(image: 'assets/images/category_images/skirt.jpeg', name: 'Skirts'),
   Item(
       image: 'assets/images/category_images/pleated.jpg',
       name: 'Pleated Skirts'),
@@ -37,9 +35,9 @@ List<Item> items = [
       name: 'Sports Suit'),
   Item(image: 'assets/images/category_images/safari.png', name: 'Safari Suit'),
   Item(
-      image: 'assets/images/category_images/denim_jacket.jpg',
+      image: 'assets/images/category_images/denim_jacket.png',
       name: 'Jean Jacket'),
-  Item(image: 'assets/images/category_images/suit.jpg', name: 'Suit'),
+  Item(image: 'assets/images/category_images/suit.png', name: 'Suit'),
   Item(image: 'assets/images/category_images/blazer.jpg', name: 'Blazers'),
   Item(image: 'assets/images/category_images/kurta.jpg', name: 'Kurtas'),
   Item(image: 'assets/images/category_images/abaya.jpg', name: 'Abaya'),
