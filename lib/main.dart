@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noble_laundry/app/widgets/bottom_nav.dart';
+import 'app/screens/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Noble Laundry',
+      title: 'Ice Laundry',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Poppins', // Set the default font family
+        textTheme: Theme.of(context).textTheme.apply(
+              fontFamily: 'Poppins',
+            ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
-      home: const BottomNavigation(),
+      home: const SplashScreen(),
     );
   }
 }

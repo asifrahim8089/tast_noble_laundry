@@ -1,4 +1,4 @@
-package com.example.noble_laundry
+package com.example.ice_laundry
 
 import io.flutter.embedding.android.FlutterActivity
 

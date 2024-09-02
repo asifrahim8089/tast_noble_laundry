@@ -1,6 +1,6 @@
 {
-    "name": "noble_laundry",
-    "short_name": "noble_laundry",
+    "name": "ice_laundry",
+    "short_name": "ice_laundry",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

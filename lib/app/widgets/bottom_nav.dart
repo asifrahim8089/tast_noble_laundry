@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/contact_us.dart';
-import '../screens/item_screen.dart';
+import '../screens/home_screen.dart';
 import '../screens/my_orders.dart';
 import '../screens/my_profile.dart';
 
@@ -18,7 +18,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    ItemsScreen(),
+    HomeScreen(),
     MyOrdersScreen(),
     ContactUsScreen(),
     MyProfileScreen(),
@@ -42,16 +42,16 @@ class _BottomNavigationState extends State<BottomNavigation> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
+            icon: Icon(Icons.grid_view_rounded),
             label: 'Items',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
-            label: 'My Orders',
+            icon: Icon(Icons.timer),
+            label: 'Quick Order',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.contact_page),
-            label: 'Contact Us',
+            label: 'My Orders',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

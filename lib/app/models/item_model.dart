@@ -22,23 +22,13 @@ class Item {
 }
 
 List<Item> items = [
-  Item(image: 'assets/images/category_images/pants.jpeg', name: 'Pants'),
-  Item(image: 'assets/images/category_images/jeans.jpg', name: 'Jeans'),
-  Item(image: 'assets/images/category_images/shorts.jpg', name: 'Shorts'),
-  Item(image: 'assets/images/category_images/skirt.jpeg', name: 'Skirts'),
-  Item(
-      image: 'assets/images/category_images/pleated.jpg',
-      name: 'Pleated Skirts'),
-  Item(image: 'assets/images/category_images/doctor.jpg', name: 'Doctor Coat'),
-  Item(
-      image: 'assets/images/category_images/sports_suit.jpg',
-      name: 'Sports Suit'),
-  Item(image: 'assets/images/category_images/safari.png', name: 'Safari Suit'),
-  Item(
-      image: 'assets/images/category_images/denim_jacket.png',
-      name: 'Jean Jacket'),
-  Item(image: 'assets/images/category_images/suit.png', name: 'Suit'),
-  Item(image: 'assets/images/category_images/blazer.jpg', name: 'Blazers'),
-  Item(image: 'assets/images/category_images/kurta.jpg', name: 'Kurtas'),
-  Item(image: 'assets/images/category_images/abaya.jpg', name: 'Abaya'),
+  Item(image: 'assets/images/category_images/trd8.png', name: 'Qatari Thobe'),
+  Item(image: 'assets/images/category_images/trd7.png', name: 'Winter Thobe'),
+  Item(image: 'assets/images/category_images/trd9.png', name: 'Ghutra'),
+  Item(image: 'assets/images/category_images/trd10.png', name: 'Shimagh'),
+  Item(image: 'assets/images/category_images/trd5.png', name: 'Abaya'),
+  Item(image: 'assets/images/category_images/trd4.png', name: 'Gown'),
+  Item(image: 'assets/images/category_images/trd3.png', name: 'Besht'),
+  Item(image: 'assets/images/category_images/trd2.png', name: 'Jalebiah'),
+  Item(image: 'assets/images/category_images/trd1.png', name: 'Sarwal'),
 ];
