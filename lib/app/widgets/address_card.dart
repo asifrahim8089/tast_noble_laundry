@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../screens/address/address_screen.dart';
+
 class AddressCard extends StatelessWidget {
   final String title;
   final String address;
+  final String? addnewaddress;
   final IconData icon;
   final Color iconColor;
   final Color cardColor;
@@ -12,9 +15,10 @@ class AddressCard extends StatelessWidget {
   final VoidCallback? onSetDefault;
 
   const AddressCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.address,
+    this.addnewaddress,
     required this.icon,
     required this.iconColor,
     required this.cardColor,
@@ -22,7 +26,7 @@ class AddressCard extends StatelessWidget {
     this.canSetDefault = false,
     required this.onEdit,
     this.onSetDefault,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -98,6 +102,26 @@ class AddressCard extends StatelessWidget {
               address,
               style: TextStyle(color: Colors.grey[600]),
             ),
+            if ((addnewaddress ?? "").isNotEmpty) ...[
+              const SizedBox(height: 8),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AddressListScreen(),
+                    ),
+                  );
+                },
+                child: Text(
+                  addnewaddress ?? "",
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Colors.grey,
+                        decoration: TextDecoration.underline,
+                      ),
+                ),
+              ),
+            ]
           ],
         ),
       ),

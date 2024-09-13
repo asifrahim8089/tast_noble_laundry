@@ -1,11 +1,25 @@
+// ignore_for_file: unused_element
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ice_laundry/app/screens/address/address_screen.dart';
+import '../widgets/contactus.dart';
 import '../widgets/slider_items.dart';
 import '../widgets/tabbarview/traditional_view.dart';
+import 'cart/cart_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+  void showLaundryServicePopup(BuildContext context, bool isCall) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return LaundryServicePopup(
+          isCall: isCall,
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,15 +93,25 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             actions: [
-              Card(
-                margin: const EdgeInsets.all(5),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 5), // Add padding around the image
-                  child: Image.asset(
-                    "assets/images/shopping-cart.png",
-                    height: 30,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(),
+                    ),
+                  );
+                },
+                child: Card(
+                  margin: const EdgeInsets.all(5),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 5), // Add padding around the image
+                    child: Image.asset(
+                      "assets/images/shopping-cart.png",
+                      height: 30,
+                    ),
                   ),
                 ),
               ),
@@ -277,9 +301,7 @@ class HomeScreen extends StatelessWidget {
               right: 0.0,
               child: FloatingActionButton(
                 heroTag: "call",
-                onPressed: () {
-                  // Handle call action
-                },
+                onPressed: () => showLaundryServicePopup(context, true),
                 backgroundColor: Colors.transparent,
                 child: CircleAvatar(
                   radius: 50,
@@ -305,9 +327,7 @@ class HomeScreen extends StatelessWidget {
               right: 0.0,
               child: FloatingActionButton(
                 heroTag: "chat",
-                onPressed: () {
-                  // Handle message action
-                },
+                onPressed: () => showLaundryServicePopup(context, false),
                 backgroundColor: Colors.transparent,
                 child: CircleAvatar(
                   radius: 50,

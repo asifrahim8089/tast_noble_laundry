@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../screens/contact_us.dart';
+import '../screens/quick_order.dart';
 import '../screens/home_screen.dart';
-import '../screens/my_orders.dart';
+import '../screens/my_orders/my_orders.dart';
 import '../screens/my_profile.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -19,8 +19,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   final List<Widget> _screens = [
     HomeScreen(),
-    MyOrdersScreen(),
-    ContactUsScreen(),
+    QuickOrderScreen(),
+    OrderListScreen(),
     MyProfileScreen(),
   ];
 

@@ -142,9 +142,7 @@ class _OtpScreenState extends State<OtpScreen> {
         validator: (value) {
           return null;
         },
-        onCompleted: (pin) {
-          print('Success: $pin');
-        },
+        onCompleted: (pin) {},
         errorBuilder: (errorText, pin) {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),

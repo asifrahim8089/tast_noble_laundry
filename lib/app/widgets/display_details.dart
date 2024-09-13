@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ice_laundry/app/screens/cart/cart_screen.dart';
 import 'package:ice_laundry/app/widgets/addto_basket.dart';
 
 import 'perfume_selection.dart';
@@ -169,14 +170,25 @@ class _ItemDetailsState extends State<ItemDetails> {
           ),
         ),
         actions: [
-          Card(
-            margin: const EdgeInsets.all(5),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 10, vertical: 5), // Add padding around the image
-              child: Image.asset(
-                "assets/images/shopping-cart.png",
-                height: 25,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CartScreen(),
+                ),
+              );
+            },
+            child: Card(
+              margin: const EdgeInsets.all(5),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 5), // Add padding around the image
+                child: Image.asset(
+                  "assets/images/shopping-cart.png",
+                  height: 25,
+                ),
               ),
             ),
           ),
@@ -270,7 +282,14 @@ class _ItemDetailsState extends State<ItemDetails> {
               padding: const EdgeInsets.all(8.0),
               child: AddToBasketButton(
                 total: 10.00,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartScreen(),
+                    ),
+                  );
+                },
               ),
             ),
             const SizedBox(height: 30),
